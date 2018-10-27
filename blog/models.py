@@ -3,7 +3,8 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    nickname = models.CharField(max_length = 50) # I added without DataBase settings
+    # nickname = models.CharField(max_length = 50) # I added without DataBase settings
+    # Unless nickname is deleted, it occurs errors when using queryset.
     title = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(default = timezone.now)
