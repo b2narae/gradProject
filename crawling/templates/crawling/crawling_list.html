@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Ola's blog</title>
+    </head>
+    <body>
+        <div>
+			<h1><a href="/">Django Girls Blog</a></h1>
+		</div>
+			{% for car in cars %}
+				<div>
+					<p>Model: {{ car.Model }}</p>
+					<h1><a href="">{{ car.Maker }}</a></h1>
+					<p>{{ car.Price }}</p>
+				</div>
+			{% endfor %}
+    </body>
+</html>
